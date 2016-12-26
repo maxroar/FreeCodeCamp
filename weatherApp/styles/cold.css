@@ -1,0 +1,13 @@
+*{
+  margin:0;
+  padding: 0;
+}
+#wrapper{
+  margin: 20px auto;
+  background: #cccccc;
+}
+body{
+  background-image: url('../img/cold.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

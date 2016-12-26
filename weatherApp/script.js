@@ -1,14 +1,4 @@
 $(document).ready(function(){
-  //function to convert fahrenheit to celcius
-  function fToC(f){
-    var cel= (f-32)*5/9;
-    $('h3').html(`${cel}`)
-  }
-  //function to conver celcius to fahrenheit
-  function cToF(c){
-    var fah = (9/5)*c + 32;
-    return fah;
-  }
   //variables to hold the user's lat and longitude
   var lat = 0;
   var lon = 0;
@@ -35,7 +25,6 @@ $(document).ready(function(){
     });
   }
   setLoc();
-
   function setVars(response){
     cityName = response.name;
     temp = response.main.temp;
@@ -57,6 +46,25 @@ $(document).ready(function(){
       <button id="f" type="button">Fahrenheit</button>
       <button id="c" type="button">Celcius</button>
       `);
+      //functions for the f-c buttons
+      $('#f').on('click', function(){
+        temp = (9/5)*temp + 32;
+        //limit to 2 decimals
+        temp = temp.toFixed(2);
+        $('h3').html(`<h3>${temp}&#8457;</h3>`);
+        $('#c').attr('class','inactive');
+        $('#f').attr('class','active');
+        console.log(temp);
+      });
+      $('#c').on('click', function(){
+        temp = (temp-32)*5/9;
+        //limit to 2 decimals
+        temp = temp.toFixed(2);
+        $('h3').html(`<h3>${temp}&#8451;</h3>`);
+        $('#c').attr('class','active');
+        $('#f').attr('class','inactive');
+        console.log(temp);
+      });
   }
   //a function to set the
   $('form').on('submit', function(){
@@ -68,4 +76,5 @@ $(document).ready(function(){
     });
     return false;
   });
+
 });

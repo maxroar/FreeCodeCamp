@@ -3,11 +3,20 @@
   padding: 0;
 }
 #wrapper{
-  margin: 20px auto;
+  margin: auto;
   background: #cccccc;
+  width: 60%;
+  padding: 20px;
 }
 body{
-  background-image: url('globe.jpg');
+  background-image: url('../img/globe.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+h1, form{
+  display: inline-block;
+}
+#resultDisplay{
+  margin: 20px auto;
+  text-align: center;
 }
