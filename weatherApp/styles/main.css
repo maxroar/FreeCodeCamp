@@ -5,8 +5,11 @@
 #wrapper{
   margin: auto;
   background: #cccccc;
-  width: 60%;
+  width: auto;
   padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  text-align: center;
 }
 body{
   background-image: url('../img/globe.jpg');
@@ -15,8 +18,14 @@ body{
 }
 h1, form{
   display: inline-block;
+  font-size: 25px;
 }
 #resultDisplay{
   margin: 20px auto;
-  text-align: center;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 35px;
 }
